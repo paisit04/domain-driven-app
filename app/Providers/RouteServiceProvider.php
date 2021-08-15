@@ -26,7 +26,9 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string|null
      */
-    // protected $namespace = 'App\\Http\\Controllers';
+    protected $namespace = 'App\Http\Controllers';
+    protected $submission_namespace = 'Claim\Submission\Application\Http\Controllers';
+    protected $submission_dir = 'src/Claim/Submission/Application/Routes/';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -43,9 +45,19 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/api.php'));
 
+            Route::prefix('submission/api')
+                ->middleware('api')
+                ->namespace($this->submission_namespace . '/Api')
+                ->group(base_path($this->submission_dir . 'api.php'));
+
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
+
+            Route::middleware('web')
+                ->namespace($this->submission_namespace)
+                ->prefix('submission')
+             ->group(base_path($this->submission_dir . 'web.php'));
         });
     }
 
