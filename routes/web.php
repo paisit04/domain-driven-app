@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/upload', 'UploadController@upload')->name('upload');
+
+Route::post('/process', 'UploadController@process2')->name('process');
+
+Route::get('/list', 'UploadController@list')->name('list');
