@@ -37,3 +37,11 @@ class RegisterUser
         $this->user->save();
     }
 }
+
+/*
+$params = [`name` => `Jesse`, `username` => `debdubstep`];
+
+$userRegister = new RegisterUser($params);
+$userRegister->registerUser();
+$user = $userRegister->getUser();
+*/
