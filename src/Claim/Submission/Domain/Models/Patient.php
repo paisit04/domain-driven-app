@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace Claim\Submission\Domain\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Patient extends Model
 {
