@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-use App\Models\ClaimStatus;
+use Claim\Submission\Domain\Models\ClaimStatus;
 
 class CreateClaimStatusTable extends Migration
 {
@@ -19,7 +19,7 @@ class CreateClaimStatusTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-		    $table->string('code');
+            $table->string('code');
         });
 
         ClaimStatus::create([

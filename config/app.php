@@ -175,6 +175,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * DDD Providers...
+         */
+        Claim\Submission\Application\Providers\ClaimSubmissionProvider::class,
     ],
 
     /*
