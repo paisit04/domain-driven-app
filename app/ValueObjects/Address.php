@@ -6,7 +6,7 @@ class Address implements \JsonSerializable
 {
     private $value;
     
-    public function __construct($address="")
+    public function __construct($address)
     {
         $this->value = $address;
     }
