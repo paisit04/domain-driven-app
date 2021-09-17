@@ -15,7 +15,7 @@ class RegisterPatientService
         DocumentUploadService $docService,
         PatientPrimaryService $patientPrimaryService,
         PatientEligibilityService $patientEligibilityService,
-        EventDispatcher $eventDispatcher,
+        EventDispatcher $eventDispatcher
     ) {
         $this->patientRepository = $patientRepository;
         $this->docService = $docService;
@@ -42,7 +42,7 @@ class RegisterPatientService
         // ... dispatch the remaining events ...
     }
 
-    public function validatePatientDetails(PaymentDetails $paymentDetails);
+    public function validatePatientDetails(PaymentDetails $paymentDetails)
     {
         //domain validations - although this could be better placed 
         //within the model itself as a precondition, it still works

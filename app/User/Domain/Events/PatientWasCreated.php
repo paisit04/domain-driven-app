@@ -1,4 +1,5 @@
 <?php
+/*
 namespace App\User\Domain\Events;
 
 use Illuminate\Queue\SerializesModels;
@@ -20,3 +21,4 @@ class PatientWasCreated extends DomainEvent
         return (string)$this->patientDetails;
     }
 }
+*/
